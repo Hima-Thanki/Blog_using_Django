@@ -9,15 +9,17 @@
 
 body {
   font-family: Arial;
-  padding: 20px;
+  padding: 10px;
   background: #f1f1f1;
 }
 
 .header {
   padding: 2px;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
-  background: white;
+  margin-top: 20px;
+  border: 5px outset red;
+  background-color: #f6c6af;
 }
 
 .leftcolumn {   
@@ -26,9 +28,10 @@ body {
 }
 
 .card {
-   background-color: white;
-   padding: 20px;
+   padding: 10px;
    margin-top: 20px;
+   border: 5px outset red;
+   background-color: #ffe6e3;
 }
 
 .row:after {
@@ -56,7 +59,7 @@ body {
     {% for post in posts reversed %}
     <div class="card">
       <a style="text-decoration: none; color: black;" href="/post/{{post.id}}">
-        <h2>{{post.title}}</h2>
+        <h2> <b>=> </b> {{post.title}}</h2>
         <h5>{{post.created_at}}</h5>
         <p>{{post.body|truncatewords:20}}</p>
       </a>
